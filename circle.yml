@@ -1,0 +1,7 @@
+dependencies:
+  pre: 
+   - sudo apt-get update -y && sudo apt-get install -y node npm; 
+   
+  post:
+   - npm install
+
