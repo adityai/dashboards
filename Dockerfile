@@ -1,12 +1,9 @@
-FROM node
+FROM httpd
 
 RUN apt-get update -y 
 
-WORKDIR /usr/src/app
-ADD . /usr/src/app
-
-RUN npm install 
+WORKDIR /usr/local/apache2/htdocs/
+ADD . /usr/local/apache2/htdocs/
   
-EXPOSE 3000
+EXPOSE 80 
 
-CMD ["npm", "start"]
